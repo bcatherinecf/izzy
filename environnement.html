@@ -12,8 +12,43 @@
         <!-- Section Graphique -->
         <div class="bg-gray-200 p-4 rounded-lg mb-6">
             <h2 class="text-center text-lg font-semibold">Répartition des émissions Carbone depuis le 1er janvier 2023</h2>
-            <div class="flex justify-center mt-4">
+            <div class="flex flex-col md:flex-row items-center justify-center mt-4">
                 <canvas id="carbonChart" class="w-64"></canvas>
+                <div class="ml-6 w-full md:w-1/2">
+                    <h3 class="text-md font-semibold mb-3">Top 5 des catégories</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex items-center bg-gray-100 p-3 rounded-lg shadow">
+                            <img src="https://via.placeholder.com/40" alt="Transport" class="w-8 h-8 mr-3">
+                            <span class="flex-1">Transport</span>
+                            <span class="font-bold">25%</span>
+                            <span class="ml-4 text-gray-600">5000€</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 p-3 rounded-lg shadow">
+                            <img src="https://via.placeholder.com/40" alt="Industrie" class="w-8 h-8 mr-3">
+                            <span class="flex-1">Industrie</span>
+                            <span class="font-bold">30%</span>
+                            <span class="ml-4 text-gray-600">6000€</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 p-3 rounded-lg shadow">
+                            <img src="https://via.placeholder.com/40" alt="Agriculture" class="w-8 h-8 mr-3">
+                            <span class="flex-1">Agriculture</span>
+                            <span class="font-bold">20%</span>
+                            <span class="ml-4 text-gray-600">4000€</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 p-3 rounded-lg shadow">
+                            <img src="https://via.placeholder.com/40" alt="Résidentiel" class="w-8 h-8 mr-3">
+                            <span class="flex-1">Résidentiel</span>
+                            <span class="font-bold">15%</span>
+                            <span class="ml-4 text-gray-600">3000€</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 p-3 rounded-lg shadow">
+                            <img src="https://via.placeholder.com/40" alt="Déchets" class="w-8 h-8 mr-3">
+                            <span class="flex-1">Déchets</span>
+                            <span class="font-bold">10%</span>
+                            <span class="ml-4 text-gray-600">2000€</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
