@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izzy Environnement</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
@@ -12,7 +13,7 @@
         <div class="bg-gray-200 p-4 rounded-lg mb-6">
             <h2 class="text-center text-lg font-semibold">Répartition des émissions Carbone depuis le 1er janvier 2023</h2>
             <div class="flex justify-center mt-4">
-                <img src="your-chart-image.png" alt="Graphique des émissions" class="w-64">
+                <canvas id="carbonChart" class="w-64"></canvas>
             </div>
         </div>
         
@@ -59,5 +60,23 @@
             <p class="text-sm text-gray-700">Le Groupe CF peut vous accompagner sur l’ensemble de vos sujets RSE : Audit, Diagnostic, Conseil… Contactez-nous à <a href="mailto:contact@groupecf.com" class="text-blue-600 font-semibold">contact@groupecf.com</a>.</p>
         </div>
     </div>
+    
+    <script>
+        const ctx = document.getElementById('carbonChart').getContext('2d');
+        const carbonChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Entretien et réparation matériel', 'Achat de marchandises', 'Achat de machines', 'Consommation d'énergie'],
+                datasets: [{
+                    data: [38.14, 27.18, 16.89, 11.89],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
 </body>
 </html>
