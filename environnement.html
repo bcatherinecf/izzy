@@ -6,6 +6,16 @@
     <title>Izzy Environnement</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    // Fonction pour récupérer les paramètres de l'URL
+        function getParameterByName(name) {
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var url = window.location.href;
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
     <script>var maVariable = getParameterByName('maVariable');</script>
 </head>
 <body class="bg-gray-100 p-6">
