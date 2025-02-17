@@ -18,11 +18,13 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
-        
-        var text = getParameterByName('texte');
+
+        // Récupérer les valeurs des paramètres 'tableNumerique', 'tableTextuelle' et 'texte'
         var donut_values = getParameterByName('donut_values');
         var donut_names = getParameterByName('donut_names');
-    
+        var texte = getParameterByName('texte');
+        var donut_values = donut_values ? donut_values.split(',').map(Number) : [];
+        var donut_names = donut_names ? donut_names.split(',') : [];
     </script>
 </head>
 <body class="bg-gray-100 p-6">
